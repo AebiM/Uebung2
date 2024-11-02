@@ -38,10 +38,10 @@ class Vector3:
                        a.x * b.y - a.y * b.x)
     
     def normalize(a):
-        mag = (a.x**2 + a.y**2 + a.z**2)**0.5
-        if mag == 0:
+        l = (a.x**2 + a.y**2 + a.z**2)**0.5
+        if l == 0:
             raise ValueError("Cannot normalize a zero vector")
-        return Vector3(a.x / mag, a.y / mag, a.z / mag)
+        return Vector3(a.x / l, a.y / l, a.z / l)
 
 
 a = Vector3(3,4,2) 
